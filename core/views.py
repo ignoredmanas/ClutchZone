@@ -40,4 +40,15 @@ def home(request):
             )
             context["success"] = "Your team registration was submitted successfully."
 
+        context["valorant_slots"] = (
+            MAX_TEAMS_BY_GAME["valorant"] - Registrations.objects.filter(game="valorant").count()
+        )
+
+        context["bgmi_slots"] = (
+            MAX_TEAMS_BY_GAME["bgmi"] - Registrations.objects.filter(game="bgmi").count()
+        )
+
+        context["free_fire_slots"] = (
+            MAX_TEAMS_BY_GAME["free-fire"] - Registrations.objects.filter(game="free-fire").count()
+        )
     return render(request, "core/home.html", context)
