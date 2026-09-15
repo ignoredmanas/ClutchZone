@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClutchZone | Gaming Tournaments</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
     <header>
@@ -21,7 +23,7 @@
             <p>Season 1 registrations are open</p>
             <h2>Enter the ClutchZone</h2>
             <p>Find tournaments, register your team, and compete.</p>
-            <a href="#tournaments">View tournaments</a>
+            <a class="button" href="#tournaments">View Tournaments</a>
         </section>
 
         <section id="tournaments">
@@ -29,23 +31,53 @@
 
             <article>
                 <h3>Valorant</h3>
-                <p>Team tournament</p>
+                <p>5-player team tournament</p>
+                <a class="button" href="#register">Register Team</a>
             </article>
 
             <article>
                 <h3>BGMI</h3>
-                <p>Squad tournament</p>
+                <p>4-player squad tournament</p>
+                <a class="button" href="#register">Register Squad</a>
             </article>
 
             <article>
                 <h3>Free Fire</h3>
-                <p>Squad tournament</p>
+                <p>4-player squad tournament</p>
+                <a class="button" href="#register">Register Squad</a>
             </article>
+        </section>
+
+        <section id="register">
+            <h2>Register Your Team</h2>
+            <p>Fill in your details to join a tournament.</p>
+
+            <form>
+                <label for="team-name">Team Name</label>
+                <input type="text" id="team-name" name="team-name" required>
+
+                <label for="game">Choose Game</label>
+                <select id="game" name="game" required>
+                    <option value="">Select a game</option>
+                    <option value="valorant">Valorant</option>
+                    <option value="bgmi">BGMI</option>
+                    <option value="free-fire">Free Fire</option>
+                </select>
+
+                <label for="leader-name">Team Leader Name</label>
+                <input type="text" id="leader-name" name="leader-name" required>
+
+                <label for="game-id">Game ID</label>
+                <input type="text" id="game-id" name="game-id" required>
+
+                <button type="submit">Register Team</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 ClutchZone</p>
+        <h3>CLUTCHZONE</h3>
+        <p>© 2026 ClutchZone. Play hard. Register smart.</p>
     </footer>
 </body>
 </html>

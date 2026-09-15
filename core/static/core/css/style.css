@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    background-color: #0b0b12;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 40px 10%;
+}
+
+section {
+    margin-bottom: 80px;
+}
+header {
+    background-color: #15151f;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333344;
+}
+
+header h1 {
+    margin: 0;
+    color: #b9ff3d;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #b9ff3d;
+}
+#home {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #171724, #0b0b12);
+}
+#home h2 {
+    font-size: 55px;
+    margin: 15px 0;
+    color: #b9ff3d;
+}
+
+#home p {
+    color: #b5b5c0;
+    font-size: 18px;
+}
+.button,
+button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #b9ff3d;
+    color: #0b0b12;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#tournaments h2,
+#register h2 {
+    color: #b9ff3d;
+}
+
+article {
+    background-color: #15151f;
+    padding: 25px;
+    margin: 18px 0;
+    border-left: 4px solid #b9ff3d;
+}
+form {
+    max-width: 500px;
+    background-color: #15151f;
+    padding: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #444455;
+    background-color: #0b0b12;
+    color: white;
+}
+
+footer {
+    padding: 30px;
+    background-color: #15151f;
+    text-align: center;
+    border-top: 1px solid #333344;
+}
+
+footer h3 {
+    color: #b9ff3d;
+}
