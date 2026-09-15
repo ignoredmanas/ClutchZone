@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ClutchZone gaming tournament registrations.">
+    <title>{% block title %}ClutchZone{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{% url 'core:home' %}">CLUTCH<span>ZONE</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#tournaments">Tournaments</a>
+        <a href="#how-it-works">How it works</a>
+        <a class="nav-button" href="#tournaments">Register</a>
+      </nav>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>© {% now "Y" %} ClutchZone. Play hard. Register smart.</footer>
+  </body>
+</html>
