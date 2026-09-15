@@ -2,6 +2,11 @@ from django.shortcuts import render
 
 from registrations.models import Registrations
 
+MAX_TEAMS_BY_GAME = {
+    "valorant":2,
+    "bgmi":16,
+    "free-fire":12,
+}
 
 def home(request):
     context = {}
@@ -21,7 +26,13 @@ def home(request):
             context["error"] = "Please choose a valid game."
 
         else:
-            Registrations.objects.create(
+            registration_count = Registrations.objects.filter(game=game).count()
+
+            if registration_count >= MAX_TEAMS_BY_GAME[game]:
+                context["error"] = "Sorry, this tournament is full."
+
+            else:
+                Registrations.objects.create(
                 team_name=team_name,
                 game=game,
                 leader_name=leader_name,
